@@ -5,6 +5,7 @@
 package autonoma.proyectofinal.models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -15,17 +16,18 @@ public class Enfermedad {
     private String nombreEnfermedad;
     private String recomendacionBasica;
     private String nombreCategoria;
-    private ArrayList<String> listaSintomas;
+    private List<String> listaSintomas;
 
     public Enfermedad() {
+        this.listaSintomas = new ArrayList<>();
     }
     
-    public Enfermedad(int id, String nombreEnfermedad, String recomendacionBasica, String nombreCategoria, ArrayList<String> listaSintomas) {
+    public Enfermedad(int id, String nombreEnfermedad, String recomendacionBasica, String nombreCategoria) {
         this.id = id;
         this.nombreEnfermedad = nombreEnfermedad;
         this.recomendacionBasica = recomendacionBasica;
         this.nombreCategoria = nombreCategoria;
-        this.listaSintomas = listaSintomas;
+        this.listaSintomas = new ArrayList<>();
     }
 
     public int getId() {
@@ -60,13 +62,15 @@ public class Enfermedad {
         this.nombreCategoria = nombreCategoria;
     }
 
-    public ArrayList<String> getListaSintomas() {
+    public List<String> getListaSintomas() {
         return listaSintomas;
     }
 
-    public void setListaSintomas(ArrayList<String> listaSintomas) {
+    public void setListaSintomas(List<String> listaSintomas) {
         this.listaSintomas = listaSintomas;
     }
+
+  
     
     
     

@@ -22,8 +22,8 @@ public class PrologQueryExecutor {
         }
     }
     
-    public static List<Organismo> getAnimals(String rule) {
-        List<Organismo> lista = new ArrayList<>();
+    public static List<Enfermedad> getAnimals(String rule) {
+        List<Enfermedad> lista = new ArrayList<>();
 
         Query q = new Query(rule);
 
@@ -55,7 +55,7 @@ public class PrologQueryExecutor {
                 especie = especieT.toString();
             }
 
-            Organismo o = new Organismo(id, nombre, especie);
+            Enfermedad o = new Enfermedad(id, nombre, especie);
             lista.add(o);
         }
 
