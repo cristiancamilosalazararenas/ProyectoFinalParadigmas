@@ -11,7 +11,7 @@ public class FactsBuilder {
         this.conn = MySQLConnection.getInstance().getConnection();
     }
     
-    public static boolean construirFactsOrganismo(){
+    public static boolean construirFactsEnfermedad(){
         EnfermedadDAO dao = new EnfermedadDAO();
         try {
             List<Enfermedad> lista = dao.buscarTodos();
