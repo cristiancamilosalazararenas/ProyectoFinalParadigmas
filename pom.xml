@@ -12,7 +12,7 @@
             <version>8.0.33</version>
         </dependency>
         <dependency>
-            <groupId>org.kamicris</groupId>
+            <groupId>org.criskami</groupId>
             <artifactId>prolog</artifactId>
             <version>1</version>
         </dependency>

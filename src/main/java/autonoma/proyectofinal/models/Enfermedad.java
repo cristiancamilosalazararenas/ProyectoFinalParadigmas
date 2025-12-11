@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package autonoma.proyectofinal.models;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author camil
- */
 public class Enfermedad {
-    private int id;
     private String nombreEnfermedad;
     private String recomendacionBasica;
     private String nombreCategoria;
@@ -22,20 +13,11 @@ public class Enfermedad {
         this.listaSintomas = new ArrayList<>();
     }
     
-    public Enfermedad(int id, String nombreEnfermedad, String recomendacionBasica, String nombreCategoria) {
-        this.id = id;
+    public Enfermedad(String nombreEnfermedad, List sintomas, String recomendacionBasica, String nombreCategoria) {
         this.nombreEnfermedad = nombreEnfermedad;
         this.recomendacionBasica = recomendacionBasica;
         this.nombreCategoria = nombreCategoria;
         this.listaSintomas = new ArrayList<>();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
         
     public String getNombreEnfermedad() {
@@ -68,10 +50,5 @@ public class Enfermedad {
 
     public void setListaSintomas(List<String> listaSintomas) {
         this.listaSintomas = listaSintomas;
-    }
-
-  
-    
-    
-    
+    } 
 }

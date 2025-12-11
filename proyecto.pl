@@ -1,4 +1,4 @@
-% Hechos
+:- dynamic(enfermedad/4).
 enfermedad(gripe,sintomas([fiebre,tos,dolor_cabeza,dolor_muscular]),categoria(viral),recomendaciones([descansar,hidratar,consultar_medico])).
 enfermedad(resfriado,sintomas([tos,estornudos,dolor_garganta]),categoria(viral),recomendaciones([descansar,hidratar])).
 enfermedad(diabetes,sintomas([sed,cansancio,perdida_peso]),categoria(cronica),recomendaciones([controlar_dieta,consultar_especialista])).
@@ -19,7 +19,7 @@ coincide_sintomas([H | T], N) :-
     enfermedad(N, sintomas(X), _, _),
     buscar_en(H, X),
     coincide_sintomas(T, N).
-  
+
 diagnostico([], _).
 diagnostico(SintomasU, E) :-
     enfermedad(E, sintomas(X), _, _),
